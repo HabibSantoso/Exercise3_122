@@ -42,6 +42,14 @@ namespace Exercise3_122
                 return (false);
             }
         }
+
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true;
+            else
+                return false;
+        }
     }
 class Program
     {
