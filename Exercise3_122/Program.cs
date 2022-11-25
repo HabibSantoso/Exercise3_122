@@ -23,6 +23,11 @@ namespace Exercise3_122
         {
             LAST = null;
         }
+
+        public bool Search(int rollNo, ref Node previous, ref Node current)
+        {
+            return false;
+        }
     }
 class Program
     {
