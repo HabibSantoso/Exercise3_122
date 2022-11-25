@@ -91,6 +91,22 @@ namespace Exercise3_122
             nim = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the name of the student: ");
             nm = Console.ReadLine();
+            Node newnode = new Node();
+            newnode.rollNumber = nim;
+            newnode.name = nm;
+            //untuk pengcekan apakah nim bisa di input ke akhir list
+            if (LAST.next == null || nim <= LAST.next.rollNumber)
+            {
+                if ((LAST.next != null) && (nim == LAST.next.rollNumber))
+                {
+                    Console.WriteLine("\nDuplicate roll number not allowed\n");
+                    return;
+                }
+                newnode.next = LAST.next;
+                LAST.next = newnode;
+                LAST = newnode;
+                return;
+            }
         }
     }
 class Program
