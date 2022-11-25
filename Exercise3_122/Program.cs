@@ -126,6 +126,11 @@ namespace Exercise3_122
             newnode.next = LAST.next;
             LAST.next = newnode;
         }
+
+        public bool delNode(int nim)
+        {
+            return true;
+        }
     }
 class Program
     {
