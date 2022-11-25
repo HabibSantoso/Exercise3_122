@@ -147,7 +147,8 @@ namespace Exercise3_122
                 LAST = previous;
                 return true;
             }
-            
+            previous.next = current.next;
+            return true;
         }
     }
 class Program
