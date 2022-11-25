@@ -107,6 +107,21 @@ namespace Exercise3_122
                 LAST = newnode;
                 return;
             }
+
+            Node previous, current;
+            previous = LAST.next;
+            current = LAST.next;
+
+            while ((current != null) && (nim >= current.rollNumber))
+            {
+                if (nim == current.rollNumber)
+                {
+                    Console.WriteLine("\nDuplicate roll number not allowed\n");
+                    return;
+                }
+                previous = current;
+                current = current.next;
+            }
         }
     }
 class Program
