@@ -85,7 +85,12 @@ namespace Exercise3_122
 
         public void addNode()
         {
-
+            int nim;
+            String nm;
+            Console.Write("\nEnter the roll number of the student : ");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the name of the student: ");
+            nm = Console.ReadLine();
         }
     }
 class Program
