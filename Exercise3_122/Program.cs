@@ -53,7 +53,10 @@ namespace Exercise3_122
 
         public void traverse()
         {
-
+            if (listEmpty())
+            {
+                Console.WriteLine("\nList empty");
+            }
         }
     }
 class Program
