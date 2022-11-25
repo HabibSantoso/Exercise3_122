@@ -82,11 +82,17 @@ namespace Exercise3_122
                 Console.Write("\n The first record in the list is: \n\n" + LAST.next.rollNumber + " " + LAST.next.name);
             }
         }
+
+        public void addNode()
+        {
+
+        }
     }
 class Program
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
