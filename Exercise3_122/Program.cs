@@ -136,6 +136,12 @@ namespace Exercise3_122
             {
                 return false;
             }
+            if (current == LAST.next)
+            {
+                LAST.next = current.next;
+            }
+            
+            
             return true;
         }
     }
