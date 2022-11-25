@@ -122,6 +122,9 @@ namespace Exercise3_122
                 previous = current;
                 current = current.next;
             }
+
+            newnode.next = LAST.next;
+            LAST.next = newnode;
         }
     }
 class Program
