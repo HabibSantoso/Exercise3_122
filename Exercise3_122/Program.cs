@@ -67,6 +67,19 @@ namespace Exercise3_122
                     Console.Write(currentNode.rollNumber + " " + currentNode.name);
                     currentNode = currentNode.next;
                 }
+                Console.Write(LAST.rollNumber + " " + LAST.name);
+            }
+        }
+
+        public void firstNode()
+        {
+            if (listEmpty())
+            {
+                Console.WriteLine("\nList empty");
+            }
+            else
+            {
+                Console.Write("\n The first record in the list is: \n\n" + LAST.next.rollNumber + " " + LAST.next.name);
             }
         }
     }
