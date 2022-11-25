@@ -33,7 +33,14 @@ namespace Exercise3_122
                     return (true);
                 }
             }
-            
+            if (rollNo == LAST.rollNumber)
+            {
+                return true;
+            }
+            else
+            {
+                return (false);
+            }
         }
     }
 class Program
