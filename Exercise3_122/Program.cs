@@ -50,6 +50,11 @@ namespace Exercise3_122
             else
                 return false;
         }
+
+        public void traverse()
+        {
+
+        }
     }
 class Program
     {
