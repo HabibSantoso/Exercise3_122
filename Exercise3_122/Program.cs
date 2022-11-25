@@ -172,7 +172,71 @@ class Program
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
                     {
-
+                        case '1':
+                            {
+                                obj.addNode();
+                            }
+                            break;
+                        case '2':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Console.Write("\nEnter the roll number of the student whose record is to be delete :");
+                                int nim = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(nim) == false)
+                                {
+                                    Console.WriteLine("\nRecord not found.");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Record with roll number " + nim + " Deleted");
+                                }
+                            }
+                            break;
+                        case '3':
+                            {
+                                obj.traverse();
+                            }
+                            break;
+                        case '4':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Node previous, current;
+                                previous = current = null;
+                                Console.Write("\nEnter the roll number of the student whose record is to be search :");
+                                int nim = Convert.ToInt32(Console.ReadLine());
+                                if (obj.Search(nim, ref previous, ref current) == false)
+                                {
+                                    Console.WriteLine("\nRecord not found.");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\nRecord found!!!");
+                                    Console.WriteLine("\nRoll number: " + current.rollNumber);
+                                    Console.WriteLine("\nName: " + current.name);
+                                }
+                            }
+                            break;
+                        case '5':
+                            {
+                                obj.firstNode();
+                            }
+                            break;
+                        case '6':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid Option");
+                                break;
+                            }
                     }
                 }
                 catch (Exception)
