@@ -129,6 +129,13 @@ namespace Exercise3_122
 
         public bool delNode(int nim)
         {
+            Node previous, current;
+            previous = current = null;
+            //
+            if (Search(nim, ref previous, ref current) == false)
+            {
+                return false;
+            }
             return true;
         }
     }
