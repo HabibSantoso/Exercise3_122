@@ -139,10 +139,15 @@ namespace Exercise3_122
             if (current == LAST.next)
             {
                 LAST.next = current.next;
+                return true;
+            }
+            if (current == LAST)
+            {
+                previous.next = LAST.next;
+                LAST = previous;
+                return true;
             }
             
-            
-            return true;
         }
     }
 class Program
